@@ -28,8 +28,8 @@ chunks <- split(json_data, ceiling(seq_along(json_data)/100))
 # Exploring data
 element_names <- names(chunks[[1]][[1]])
 
-# printing element names
+# Printing elements names
+# for (name in element_names) {
+#  cat(name, "\n")
+# }
 
-for (name in element_names) {
-  cat(name, "\n")
-}
