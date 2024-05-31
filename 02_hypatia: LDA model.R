@@ -7,6 +7,7 @@ library(topicmodels)
 library(ggplot2)
 library(udpipe)
 
+# This is an LDA model for article from 2000 to 2020
 
 # unique years
 years <- sapply(json_data, function(x) {
