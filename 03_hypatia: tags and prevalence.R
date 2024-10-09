@@ -1,3 +1,7 @@
+library(dplyr)
+library(topicmodels)
+library(tidyverse)
+
 # tags for topics
 top_terms <- terms(lda_model, 10)  # 10 terms per topic
 top_terms_df <- as.data.frame(top_terms)
