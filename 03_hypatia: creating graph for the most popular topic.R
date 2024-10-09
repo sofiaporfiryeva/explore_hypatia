@@ -1,4 +1,6 @@
 library(ggplot2)
+library(dplyr)
+library(tidyverse)
 
 ggplot(prevalence_df, aes(x = as.factor(Topic), y = Prevalence)) +
   geom_bar(stat = "identity", fill = "skyblue") +
