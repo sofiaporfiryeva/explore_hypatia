@@ -20,16 +20,3 @@ while (length(line <- readLines(conn, n = 1)) > 0) {
 
 # Close the connection
 close(conn)
-
-
-# Chunking data
-chunks <- split(json_data, ceiling(seq_along(json_data)/100))
-
-# Exploring data
-element_names <- names(chunks[[1]][[1]])
-
-# Printing elements names
-# for (name in element_names) {
-#  cat(name, "\n")
-# }
-
