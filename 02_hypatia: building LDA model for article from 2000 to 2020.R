@@ -1,7 +1,7 @@
 # Building LDA model 
 
-install.packages("ldatuning")
-library(ldatuning) # a package that estimates the best number of topics
+library(tm)
+library(topicmodels)
 
 corpus <- Corpus(VectorSource(df_text$text))
 
