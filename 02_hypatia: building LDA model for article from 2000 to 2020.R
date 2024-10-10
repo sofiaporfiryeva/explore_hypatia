@@ -10,7 +10,7 @@ corpus <- Corpus(VectorSource(df_text$text))
 trash_terms <- c("women", "woman", "one", "see", "sks")
 
 dtm <- DocumentTermMatrix(corpus, control = list(
-  wordLengths = c(3, Inf),   # Keep words with 3 or more characters
+  wordLengths = c(3, Inf),  
   removePunctuation = TRUE,
   stopwords = c(stopwords("english"), trash_terms), 
   removeNumbers = TRUE
