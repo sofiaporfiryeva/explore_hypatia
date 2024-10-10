@@ -12,11 +12,10 @@ trash_terms <- c("women", "woman", "one", "see", "sks")
 dtm <- DocumentTermMatrix(corpus, control = list(
   wordLengths = c(3, Inf),   # Keep words with 3 or more characters
   removePunctuation = TRUE,
-  stopwords = c(stopwords("english"), trash_terms),  # Include your custom stopwords
+  stopwords = c(stopwords("english"), trash_terms), 
   removeNumbers = TRUE
 ))
 
-# inspect(dtm[1:5, 1:5])
 
 # Building LDA model
 
