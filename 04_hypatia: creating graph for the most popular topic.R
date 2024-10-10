@@ -7,12 +7,13 @@ ggplot(prevalence_df, aes(x = as.factor(Topic), y = Prevalence)) +
   labs(title = "Topic Prevalence", x = "Topic", y = "Prevalence") +
   theme_minimal() +
   coord_flip() 
-# extracting the dois
+
+# extracting  dois
 
 gamma_matrix <- as.data.frame(lda_model@gamma)
 gamma_matrix$doi <- df_text$doi 
 
-threshold <- 0.2  # Example threshold, adjust as needed
+threshold <- 0.2 
 topic_13_docs <- gamma_matrix %>%
   filter(V13 > threshold) %>%  
   select(doi)
@@ -37,8 +38,8 @@ most_frequent_years <- topic_13_docs %>%
 # graph
 
 ggplot(most_frequent_years, aes(x = publicationYear, y = frequency)) +
-  geom_line(color = "lightblue") +   # Line plot
-  geom_point(color = "blue") +   # Add points for clarity
+  geom_line(color = "lightblue") +  
+  geom_point(color = "blue") +   
   labs(title = "Frequency of Topic 13: Feminist Ethics of Care",
        x = "Publication Year",
        y = "Number of Articles") +
